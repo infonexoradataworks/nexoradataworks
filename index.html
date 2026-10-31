@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexora DataWorks | Power BI, Analytics & Power Platform Freelance Services</title>
+  <meta name="description" content="Nexora DataWorks helps businesses turn complex data into confident decisions with Power BI, data analytics, data engineering and Power Platform solutions." />
+  <meta name="keywords" content="Power BI developer, freelance Power BI, data analytics, Power Apps, Power Automate, data engineering, dashboards" />
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTAwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMGIzZDkxIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzE0YjhjOCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHBhdGggZD0iTTggOTIgTDQ0IDE0IEw2MiA1MiBMNTIgOTIgWiIgZmlsbD0idXJsKCNnKSIvPgogIDxwYXRoIGQ9Ik01MiA5MiBMNzAgNDAgTDg4IDkyIFoiIGZpbGw9IiMwYjJhNWIiLz4KICA8cmVjdCB4PSI5MiIgeT0iNDgiIHdpZHRoPSI5IiBoZWlnaHQ9IjQ0IiByeD0iMiIgZmlsbD0iIzE0YjhjOCIvPgogIDxyZWN0IHg9IjEwNiIgeT0iMzAiIHdpZHRoPSI5IiBoZWlnaHQ9IjYyIiByeD0iMiIgZmlsbD0iIzBiM2Q5MSIvPgogIDxwYXRoIGQ9Ik00OCAzNiBMOTYgNiIgc3Ryb2tlPSIjMTRiOGM4IiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgogIDxwYXRoIGQ9Ik04MiA0IEwxMDAgNCBMMTAwIDIyIiBzdHJva2U9IiMxNGI4YzgiIHN0cm9rZS13aWR0aD0iNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBmaWxsPSJub25lIi8+Cjwvc3ZnPgo=" type="image/svg+xml" />
+  <style>
+/* ===========================================================
+   Nexora DataWorks - main stylesheet
+   Colours are defined once in :root, change them there.
+   =========================================================== */
+:root {
+  --navy: #0b2a5b;
+  --navy-dark: #071b3d;
+  --blue: #0b5cad;
+  --teal: #0aa5b8;
+  --cyan: #22d3ee;
+  --green: #0f9d8a;
+  --bg: #f4f9fd;
+  --white: #ffffff;
+  --text: #16243a;
+  --muted: #5b6b80;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(11, 42, 91, 0.12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+.container { width: min(1180px, 92%); margin: 0 auto; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--teal), var(--blue));
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-weight: 600;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform .2s, box-shadow .2s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(10, 165, 184, .35); }
+.btn-outline { background: transparent; color: var(--navy); border-color: var(--navy); }
+.btn-outline:hover { background: var(--navy); color: #fff; }
+.btn-small { padding: 8px 18px; font-size: .92rem; }
+
+/* ---------- Navbar ---------- */
+.navbar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255, 255, 255, .92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e3edf6;
+  transition: box-shadow .3s;
+}
+.navbar.scrolled { box-shadow: 0 4px 20px rgba(11, 42, 91, .1); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand-logo { height: 42px; width: auto; }
+.brand-text { display: flex; flex-direction: column; line-height: 1; }
+.brand-text strong { font-size: 1.35rem; letter-spacing: 2px; color: var(--navy); }
+.brand-text small { font-size: .7rem; letter-spacing: 4px; color: var(--teal); font-weight: 700; }
+.nav-links { display: flex; align-items: center; gap: 22px; }
+.nav-links a:not(.btn) { font-weight: 500; color: var(--navy); position: relative; }
+.nav-links a:not(.btn)::after {
+  content: ""; position: absolute; left: 0; bottom: -4px; height: 2px; width: 0;
+  background: var(--teal); transition: width .25s;
+}
+.nav-links a:not(.btn):hover::after { width: 100%; }
+.nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 6px; }
+.nav-toggle span { display: block; width: 26px; height: 3px; background: var(--navy); margin: 5px 0; border-radius: 2px; transition: .3s; }
+
+/* ---------- Hero ---------- */
+.hero {
+  background:
+    radial-gradient(circle at 85% 10%, rgba(34, 211, 238, .25), transparent 45%),
+    linear-gradient(180deg, #eaf5fc 0%, #ffffff 100%);
+  padding: 70px 0 90px;
+  overflow: hidden;
+}
+.hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 40px; align-items: center; }
+.tagline { font-style: italic; color: var(--teal); font-weight: 600; margin-bottom: 10px; }
+.hero h1 { font-size: clamp(2rem, 4.4vw, 3.3rem); line-height: 1.15; color: var(--navy-dark); margin-bottom: 20px; }
+.accent { color: var(--green); }
+.hero-sub { border-left: 4px solid var(--teal); padding-left: 16px; color: var(--muted); font-size: 1.08rem; max-width: 520px; margin-bottom: 28px; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 26px; }
+.brand-motto { letter-spacing: 3px; font-weight: 700; font-size: .85rem; color: var(--navy); }
+
+/* Laptop mock-up */
+.hero-visual { position: relative; }
+.laptop { transform: perspective(1200px) rotateY(-8deg) rotateX(3deg); }
+.screen {
+  background: linear-gradient(160deg, #0b2a5b, #071b3d);
+  border: 8px solid #1b2433;
+  border-radius: 14px 14px 4px 4px;
+  padding: 14px;
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+.base { height: 12px; background: linear-gradient(#cfd8e3, #9eabbb); border-radius: 0 0 18px 18px; margin: 0 -22px; }
+.dash-title { font-size: .72rem; font-weight: 700; margin-bottom: 10px; opacity: .9; }
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 10px; }
+.kpi { background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .12); border-radius: 8px; padding: 8px 6px; text-align: center; }
+.kpi span { display: block; font-size: .55rem; opacity: .75; }
+.kpi b { display: block; font-size: 1.05rem; }
+.kpi em { font-style: normal; font-size: .55rem; color: var(--cyan); }
+.charts { display: grid; grid-template-columns: 1.2fr 1fr 1.2fr; gap: 8px; height: 110px; }
+.chart { background: rgba(255, 255, 255, .06); border-radius: 8px; padding: 8px; }
+.bars { display: flex; align-items: flex-end; gap: 6px; }
+.bars span { flex: 1; height: var(--h); background: linear-gradient(var(--cyan), var(--teal)); border-radius: 3px 3px 0 0; transform-origin: bottom; animation: grow 1.2s ease-out both; }
+.bars span:nth-child(2) { animation-delay: .1s; } .bars span:nth-child(3) { animation-delay: .2s; }
+.bars span:nth-child(4) { animation-delay: .3s; } .bars span:nth-child(5) { animation-delay: .4s; } .bars span:nth-child(6) { animation-delay: .5s; }
+@keyframes grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+.donut-wrap { display: grid; place-items: center; }
+.donut {
+  width: 74px; height: 74px; border-radius: 50%;
+  background: conic-gradient(var(--cyan) 0 38%, #f59e0b 38% 55%, #3b82f6 55% 80%, #14b8a6 80% 100%);
+  -webkit-mask: radial-gradient(circle, transparent 46%, #000 47%);
+          mask: radial-gradient(circle, transparent 46%, #000 47%);
+}
+.line-wrap svg { width: 100%; height: 100%; }
+
+.float-badge {
+  position: absolute; background: #fff; color: var(--navy); font-weight: 700; font-size: .8rem;
+  padding: 8px 14px; border-radius: 999px; box-shadow: var(--shadow);
+  animation: float 4s ease-in-out infinite;
+}
+.b1 { top: -14px; left: 12%; } .b2 { top: 40%; left: -18px; animation-delay: 1s; } .b3 { bottom: 4%; left: 6%; animation-delay: 2s; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+/* ---------- Sections ---------- */
+.section { padding: 80px 0; }
+.section.alt { background: var(--bg); }
+.section-title { margin-bottom: 36px; }
+.pill {
+  display: inline-block; background: linear-gradient(135deg, var(--teal), var(--blue));
+  color: #fff; padding: 10px 28px; border-radius: 999px; font-size: 1.35rem;
+}
+.section-intro { color: var(--muted); margin: -14px 0 24px; }
+.grid { display: grid; gap: 22px; }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+.grid-5 { grid-template-columns: repeat(5, 1fr); }
+
+/* Services */
+.card { background: #fff; border-radius: var(--radius); padding: 28px 22px; box-shadow: var(--shadow); text-align: center; transition: transform .25s; }
+.card:hover { transform: translateY(-6px); }
+.card .icon {
+  width: 64px; height: 64px; margin: 0 auto 16px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 1.7rem;
+  background: linear-gradient(135deg, var(--navy), var(--teal));
+}
+.card h3 { color: var(--navy); font-size: 1.08rem; margin-bottom: 8px; }
+.card p { color: var(--muted); font-size: .95rem; }
+
+/* Domains */
+.domain {
+  height: 170px; border-radius: var(--radius); color: #fff; padding: 16px;
+  display: flex; flex-direction: column; justify-content: flex-end; gap: 4px;
+  position: relative; overflow: hidden; transition: transform .25s;
+}
+.domain:hover { transform: scale(1.04); }
+.domain span { font-size: 2rem; }
+.domain h3 { font-size: 1rem; }
+.d-finance { background: linear-gradient(160deg, #1e3a8a, #0ea5b7); }
+.d-health { background: linear-gradient(160deg, #0b5cad, #22d3ee); }
+.d-insurance { background: linear-gradient(160deg, #134e4a, #0b5cad); }
+.d-retail { background: linear-gradient(160deg, #0b2a5b, #3b82f6); }
+.d-corp { background: linear-gradient(160deg, #071b3d, #0f9d8a); }
+
+/* Why */
+.why-item { text-align: center; padding: 20px 10px; border-right: 1px solid #d6e4f0; }
+.why-item:last-child { border-right: 0; }
+.why-item span { font-size: 2.2rem; display: block; }
+.why-item b { color: var(--navy); display: block; margin-top: 6px; }
+.why-item small { color: var(--muted); }
+
+/* Portfolio */
+.filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 26px; }
+.filter {
+  border: 2px solid var(--teal); background: transparent; color: var(--navy);
+  padding: 8px 18px; border-radius: 999px; cursor: pointer; font-weight: 600; font-size: .92rem;
+  transition: .2s;
+}
+.filter:hover, .filter.active { background: var(--teal); color: #fff; }
+.project { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform .25s, opacity .3s; }
+.project:hover { transform: translateY(-6px); }
+.project.hide { display: none; }
+.thumb { height: 150px; display: grid; place-items: center; padding: 20px; }
+.thumb svg { width: 100%; height: 100%; }
+.t1 { background: linear-gradient(135deg, #0b2a5b, #0aa5b8); }
+.t2 { background: linear-gradient(135deg, #1e3a8a, #22d3ee); }
+.t3 { background: linear-gradient(135deg, #0b5cad, #14b8a6); }
+.t4 { background: linear-gradient(135deg, #134e4a, #0b5cad); }
+.t5 { background: linear-gradient(135deg, #6d28d9, #0b5cad); }
+.t6 { background: linear-gradient(135deg, #0f9d8a, #0b2a5b); }
+.project-body { padding: 20px; }
+.tag { background: #e0f4f8; color: var(--teal); font-size: .75rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; }
+.project h3 { margin: 10px 0 6px; color: var(--navy); }
+.project p { color: var(--muted); font-size: .93rem; }
+.project .tools { margin-top: 10px; font-size: .8rem; color: var(--blue); font-weight: 600; }
+.note { margin-top: 22px; font-size: .85rem; color: var(--muted); font-style: italic; }
+
+/* Process */
+.steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; }
+.step {
+  padding: 26px 22px 26px 34px; color: #fff; display: flex; flex-direction: column; gap: 4px;
+  clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 50%, calc(100% - 22px) 100%, 0 100%, 22px 50%);
+  margin-left: -10px; min-height: 130px; justify-content: center;
+}
+.step:first-child { clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 50%, calc(100% - 22px) 100%, 0 100%); margin-left: 0; }
+.step i { font-style: normal; background: #fff; color: var(--navy); width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: .85rem; }
+.step b { font-size: .98rem; }
+.step small { opacity: .85; }
+.s1 { background: #38bdf8; } .s2 { background: #22b8d8; } .s3 { background: #0aa5b8; } .s4 { background: #0b7bb5; } .s5 { background: #0b2a5b; }
+
+/* About */
+.about-grid { display: grid; grid-template-columns: 320px 1fr; gap: 40px; align-items: center; }
+.about-card { background: linear-gradient(160deg, var(--navy), var(--teal)); color: #fff; border-radius: var(--radius); padding: 36px 24px; text-align: center; box-shadow: var(--shadow); }
+.avatar { width: 110px; height: 110px; border-radius: 50%; background: rgba(255, 255, 255, .2); display: grid; place-items: center; font-size: 3rem; font-weight: 700; margin: 0 auto 16px; }
+.role { opacity: .9; font-size: .95rem; }
+.about-text h2 { color: var(--navy); margin-bottom: 14px; }
+.about-text p { color: var(--muted); margin-bottom: 12px; }
+.skills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.skills span { background: #fff; border: 1px solid #cfe3f0; color: var(--navy); padding: 6px 14px; border-radius: 999px; font-size: .85rem; font-weight: 600; }
+
+/* Contact */
+.contact { background: linear-gradient(160deg, var(--navy-dark), var(--navy)); color: #fff; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.contact-info h2 { font-size: 2rem; line-height: 1.25; margin-bottom: 14px; }
+.contact-info p { opacity: .9; margin-bottom: 14px; }
+.mail-line a { color: var(--cyan); font-weight: 600; font-size: 1.1rem; }
+.contact-form { background: #fff; color: var(--text); padding: 28px; border-radius: var(--radius); display: grid; gap: 14px; }
+.contact-form label { display: grid; gap: 6px; font-weight: 600; font-size: .9rem; color: var(--navy); }
+.contact-form input, .contact-form select, .contact-form textarea {
+  font: inherit; padding: 11px 12px; border: 1.5px solid #cfdbe8; border-radius: 10px; outline: none; transition: border .2s;
+}
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { border-color: var(--teal); }
+.contact-form .invalid { border-color: #dc2626; }
+.form-status { font-size: .9rem; min-height: 1.2em; }
+.form-status.error { color: #dc2626; }
+.form-status.ok { color: #0f9d8a; }
+
+/* Footer */
+.footer { background: var(--navy-dark); color: #cfe0f3; padding: 26px 0; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.footer .brand-text strong { color: #fff; }
+
+/* Back to top */
+.to-top {
+  position: fixed; right: 20px; bottom: 20px; width: 44px; height: 44px; border-radius: 50%;
+  border: 0; background: var(--teal); color: #fff; font-size: 1.2rem; cursor: pointer;
+  opacity: 0; pointer-events: none; transition: opacity .3s; box-shadow: var(--shadow); z-index: 90;
+}
+.to-top.show { opacity: 1; pointer-events: auto; }
+
+/* Scroll reveal */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s, transform .6s; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 980px) {
+  .hero-grid, .contact-grid, .about-grid { grid-template-columns: 1fr; }
+  .grid-4, .grid-5 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .steps { grid-template-columns: 1fr; }
+  .step, .step:first-child { clip-path: none; margin-left: 0; border-radius: 10px; margin-bottom: 8px; }
+  .why-item { border-right: 0; }
+  .laptop { transform: none; }
+}
+@media (max-width: 760px) {
+  .nav-toggle { display: block; }
+  .nav-links {
+    position: absolute; top: 70px; left: 0; right: 0; background: #fff; flex-direction: column;
+    padding: 20px; gap: 16px; border-bottom: 1px solid #e3edf6; display: none;
+  }
+  .nav-links.open { display: flex; }
+  .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr; }
+  .kpis { grid-template-columns: repeat(2, 1fr); }
+  .section { padding: 56px 0; }
+  .float-badge { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+
+</style>
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand" aria-label="Nexora DataWorks home">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTAwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMGIzZDkxIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzE0YjhjOCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHBhdGggZD0iTTggOTIgTDQ0IDE0IEw2MiA1MiBMNTIgOTIgWiIgZmlsbD0idXJsKCNnKSIvPgogIDxwYXRoIGQ9Ik01MiA5MiBMNzAgNDAgTDg4IDkyIFoiIGZpbGw9IiMwYjJhNWIiLz4KICA8cmVjdCB4PSI5MiIgeT0iNDgiIHdpZHRoPSI5IiBoZWlnaHQ9IjQ0IiByeD0iMiIgZmlsbD0iIzE0YjhjOCIvPgogIDxyZWN0IHg9IjEwNiIgeT0iMzAiIHdpZHRoPSI5IiBoZWlnaHQ9IjYyIiByeD0iMiIgZmlsbD0iIzBiM2Q5MSIvPgogIDxwYXRoIGQ9Ik00OCAzNiBMOTYgNiIgc3Ryb2tlPSIjMTRiOGM4IiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgogIDxwYXRoIGQ9Ik04MiA0IEwxMDAgNCBMMTAwIDIyIiBzdHJva2U9IiMxNGI4YzgiIHN0cm9rZS13aWR0aD0iNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBmaWxsPSJub25lIi8+Cjwvc3ZnPgo=" alt="Nexora DataWorks logo" class="brand-logo" />
+        <span class="brand-text">
+          <strong>NEXORA</strong>
+          <small>DATAWORKS</small>
+        </span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#domains">Domains</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn btn-small">Get in Touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="tagline">Make Your Data Work Smarter.</p>
+          <h1>Turn Complex Data <br />Into Confident <span class="accent">Business Decisions.</span></h1>
+          <p class="hero-sub">
+            At Nexora DataWorks, we help businesses unlock the true potential of their data
+            through advanced analytics, intelligent solutions and scalable Power Platform services.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn">Start a Project</a>
+            <a href="#portfolio" class="btn btn-outline">View Portfolio</a>
+          </div>
+          <p class="brand-motto">INSIGHTS &bull; INNOVATION &bull; IMPACT</p>
+        </div>
+
+        <!-- Dashboard mock-up (pure HTML/CSS/SVG) -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="laptop">
+            <div class="screen">
+              <div class="dash-title">Business Performance Overview</div>
+              <div class="kpis">
+                <div class="kpi"><span>Total Sales</span><b data-count="1.2" data-prefix="$" data-suffix="M" data-decimals="1">$1.2M</b><em>&#9650; 12%</em></div>
+                <div class="kpi"><span>Total Profit</span><b data-count="342" data-prefix="$" data-suffix="K">$342K</b><em>&#9650; 15%</em></div>
+                <div class="kpi"><span>Total Orders</span><b data-count="8.4" data-suffix="K" data-decimals="1">8.4K</b><em>&#9650; 11%</em></div>
+                <div class="kpi"><span>Customer Growth</span><b data-count="18" data-suffix="%">18%</b><em>&#9650; 8%</em></div>
+              </div>
+              <div class="charts">
+                <div class="chart bars">
+                  <span style="--h:30%"></span><span style="--h:42%"></span><span style="--h:50%"></span>
+                  <span style="--h:62%"></span><span style="--h:78%"></span><span style="--h:92%"></span>
+                </div>
+                <div class="chart donut-wrap"><div class="donut"></div></div>
+                <div class="chart line-wrap">
+                  <svg viewBox="0 0 100 50" preserveAspectRatio="none">
+                    <polyline points="0,42 15,36 30,38 45,26 60,28 78,14 100,6" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="base"></div>
+          </div>
+          <div class="float-badge b1">Power BI</div>
+          <div class="float-badge b2">Power Apps</div>
+          <div class="float-badge b3">Power Automate</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section" id="services">
+      <div class="container">
+        <h2 class="section-title"><span class="pill">Our Services</span></h2>
+        <div class="grid grid-4">
+          <article class="card service reveal">
+            <div class="icon">&#128200;</div>
+            <h3>Data Analytics &amp; Business Intelligence</h3>
+            <p>Actionable insights with Power BI and beyond. Interactive dashboards, DAX modelling and KPI reporting.</p>
+          </article>
+          <article class="card service reveal">
+            <div class="icon">&#9881;&#65039;</div>
+            <h3>Power Platform Solutions</h3>
+            <p>Custom Power Apps, Power Automate flows and SharePoint workflows that remove manual effort.</p>
+          </article>
+          <article class="card service reveal">
+            <div class="icon">&#128451;&#65039;</div>
+            <h3>Data Engineering &amp; Reporting</h3>
+            <p>Reliable and scalable data solutions: ETL with Power Query, SQL, data modelling and automated refresh.</p>
+          </article>
+          <article class="card service reveal">
+            <div class="icon">&#128161;</div>
+            <h3>Consulting &amp; Support</h3>
+            <p>Drive growth with expert guidance, report audits, performance tuning and ongoing support.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DOMAINS ============ -->
+    <section class="section alt" id="domains">
+      <div class="container">
+        <h2 class="section-title"><span class="pill">Our Expertise Across Domains</span></h2>
+        <div class="grid grid-5">
+          <div class="domain d-finance reveal"><span>&#127974;</span><h3>Finance</h3></div>
+          <div class="domain d-health reveal"><span>&#10084;&#65039;</span><h3>Healthcare</h3></div>
+          <div class="domain d-insurance reveal"><span>&#128737;&#65039;</span><h3>Insurance</h3></div>
+          <div class="domain d-retail reveal"><span>&#128722;</span><h3>Retail &amp; E-Commerce</h3></div>
+          <div class="domain d-corp reveal"><span>&#128188;</span><h3>Corporate: Business Analytics</h3></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY CHOOSE ============ -->
+    <section class="section" id="why">
+      <div class="container">
+        <h2 class="section-title"><span class="pill">Why Choose Nexora DataWorks?</span></h2>
+        <div class="grid grid-5 why">
+          <div class="why-item reveal"><span>&#127942;</span><b>6+ Years</b><small>of Experience</small></div>
+          <div class="why-item reveal"><span>&#128101;</span><b>5+ Expert</b><small>Team Members</small></div>
+          <div class="why-item reveal"><span>&#128640;</span><b>End-to-End</b><small>Solutions</small></div>
+          <div class="why-item reveal"><span>&#129309;</span><b>On-Time</b><small>Delivery</small></div>
+          <div class="why-item reveal"><span>&#9989;</span><b>Client-Centric</b><small>Approach</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PORTFOLIO ============ -->
+    <section class="section alt" id="portfolio">
+      <div class="container">
+        <h2 class="section-title"><span class="pill">Portfolio</span></h2>
+        <p class="section-intro">
+          A selection of dashboards and solutions. Filter by domain to explore.
+        </p>
+
+        <div class="filters" id="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="finance">Finance</button>
+          <button class="filter" data-filter="healthcare">Healthcare</button>
+          <button class="filter" data-filter="insurance">Insurance</button>
+          <button class="filter" data-filter="retail">Retail</button>
+          <button class="filter" data-filter="powerplatform">Power Platform</button>
+        </div>
+
+        <div class="grid grid-3" id="projectGrid">
+
+          <!-- ===== EDIT THESE PROJECT CARDS WITH YOUR REAL WORK ===== -->
+          <article class="project reveal" data-category="retail">
+            <div class="thumb t1">
+              <svg viewBox="0 0 120 60" preserveAspectRatio="none"><polyline points="0,50 20,40 40,44 60,26 80,30 100,12 120,8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>
+            </div>
+            <div class="project-body">
+              <span class="tag">Retail &amp; E-Commerce</span>
+              <h3>Sales Performance Dashboard</h3>
+              <p>Sales, profit and order trends by region and product category with drill-through and YoY comparison.</p>
+              <p class="tools">Power BI &bull; DAX &bull; SQL</p>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="finance">
+            <div class="thumb t2">
+              <svg viewBox="0 0 120 60" preserveAspectRatio="none"><rect x="10" y="30" width="14" height="30" fill="#fff"/><rect x="32" y="20" width="14" height="40" fill="#fff"/><rect x="54" y="26" width="14" height="34" fill="#fff"/><rect x="76" y="10" width="14" height="50" fill="#fff"/><rect x="98" y="16" width="14" height="44" fill="#fff"/></svg>
+            </div>
+            <div class="project-body">
+              <span class="tag">Finance</span>
+              <h3>Financial KPI &amp; Budget Tracker</h3>
+              <p>Budget vs. actual reporting, variance analysis and monthly financial summary for management.</p>
+              <p class="tools">Power BI &bull; Power Query &bull; Excel</p>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="healthcare">
+            <div class="thumb t3">
+              <svg viewBox="0 0 120 60"><circle cx="60" cy="30" r="22" fill="none" stroke="#fff" stroke-width="10" stroke-dasharray="90 48"/></svg>
+            </div>
+            <div class="project-body">
+              <span class="tag">Healthcare</span>
+              <h3>Patient &amp; Operations Analytics</h3>
+              <p>Admissions, bed utilisation and wait-time monitoring to help improve operational efficiency.</p>
+              <p class="tools">Power BI &bull; DAX &bull; SQL Server</p>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="insurance">
+            <div class="thumb t4">
+              <svg viewBox="0 0 120 60" preserveAspectRatio="none"><polyline points="0,15 25,22 50,18 75,38 100,34 120,48" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>
+            </div>
+            <div class="project-body">
+              <span class="tag">Insurance</span>
+              <h3>Claims &amp; Risk Dashboard</h3>
+              <p>Claims ratio, policy performance and risk segmentation with row-level security by branch.</p>
+              <p class="tools">Power BI &bull; RLS &bull; DAX</p>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="powerplatform">
+            <div class="thumb t5">
+              <svg viewBox="0 0 120 60"><rect x="12" y="14" width="26" height="32" rx="4" fill="#fff"/><rect x="47" y="14" width="26" height="32" rx="4" fill="#fff" opacity=".7"/><rect x="82" y="14" width="26" height="32" rx="4" fill="#fff" opacity=".45"/></svg>
+            </div>
+            <div class="project-body">
+              <span class="tag">Power Platform</span>
+              <h3>Approval Workflow App</h3>
+              <p>Power Apps front end with Power Automate approvals and SharePoint list storage replacing email chains.</p>
+              <p class="tools">Power Apps &bull; Power Automate &bull; SharePoint</p>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="powerplatform">
+            <div class="thumb t6">
+              <svg viewBox="0 0 120 60"><path d="M10 45 L40 20 L65 35 L110 8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="110" cy="8" r="4" fill="#fff"/></svg>
+            </div>
+            <div class="project-body">
+              <span class="tag">Power Platform</span>
+              <h3>Automated Report Distribution</h3>
+              <p>Scheduled refresh and automatic delivery of key reports to stakeholders, no manual work required.</p>
+              <p class="tools">Power Automate &bull; Power BI Service</p>
+            </div>
+          </article>
+
+        </div>
+        <p class="note">Tip: replace the project cards above with your real projects (see README, section &ldquo;Customising&rdquo;). Do not publish confidential client data.</p>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="section" id="process">
+      <div class="container">
+        <h2 class="section-title"><span class="pill">Our Delivery Process</span></h2>
+        <div class="steps">
+          <div class="step s1 reveal"><i>1</i><b>Understand Your Needs</b><small>Requirements &amp; goals</small></div>
+          <div class="step s2 reveal"><i>2</i><b>Plan &amp; Design Solution</b><small>Data model &amp; mock-ups</small></div>
+          <div class="step s3 reveal"><i>3</i><b>Develop &amp; Test</b><small>Build and validate</small></div>
+          <div class="step s4 reveal"><i>4</i><b>Deploy &amp; Train</b><small>Go live &amp; hand-over</small></div>
+          <div class="step s5 reveal"><i>5</i><b>Support &amp; Optimize</b><small>Continuous improvement</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section alt" id="about">
+      <div class="container about-grid">
+        <div class="about-card reveal">
+          <div class="avatar">N</div>
+          <h3>Your Name Here</h3>
+          <p class="role">Founder &amp; Lead Power BI Developer</p>
+        </div>
+        <div class="about-text reveal">
+          <h2>About Nexora DataWorks</h2>
+          <p>
+            Nexora DataWorks is a data analytics practice powered by a team of 5+ experts, each with
+            6+ years of hands-on experience building dashboards, data models and automation solutions
+            for business teams.
+          </p>
+          <p>
+            The focus is simple: understand your business problem, build a clean and reliable solution,
+            deliver on time, and make sure your team can use it confidently.
+          </p>
+          <div class="skills">
+            <span>Power BI</span><span>DAX</span><span>Power Query</span><span>SQL</span>
+            <span>Power Apps</span><span>Power Automate</span><span>SharePoint</span><span>Excel</span>
+            <span>Data Modelling</span><span>ETL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <h2>Let&rsquo;s collaborate to build smarter solutions together!</h2>
+          <p>Tell me about your data challenge and I&rsquo;ll get back to you shortly.</p>
+          <p class="mail-line">&#9993;&#65039; <a href="mailto:info.nexoradataworks@gmail.com">info.nexoradataworks@gmail.com</a></p>
+        </div>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <label>Name
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </label>
+          <label>Email
+            <input type="email" id="email" name="email" placeholder="you@company.com" required />
+          </label>
+          <label>Service needed
+            <select id="service" name="service">
+              <option>Data Analytics &amp; Business Intelligence</option>
+              <option>Power Platform Solutions</option>
+              <option>Data Engineering &amp; Reporting</option>
+              <option>Consulting &amp; Support</option>
+            </select>
+          </label>
+          <label>Message
+            <textarea id="message" name="message" rows="5" placeholder="Describe your project..." required></textarea>
+          </label>
+          <button type="submit" class="btn">Send Message</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="brand footer-brand">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTAwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMGIzZDkxIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzE0YjhjOCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHBhdGggZD0iTTggOTIgTDQ0IDE0IEw2MiA1MiBMNTIgOTIgWiIgZmlsbD0idXJsKCNnKSIvPgogIDxwYXRoIGQ9Ik01MiA5MiBMNzAgNDAgTDg4IDkyIFoiIGZpbGw9IiMwYjJhNWIiLz4KICA8cmVjdCB4PSI5MiIgeT0iNDgiIHdpZHRoPSI5IiBoZWlnaHQ9IjQ0IiByeD0iMiIgZmlsbD0iIzE0YjhjOCIvPgogIDxyZWN0IHg9IjEwNiIgeT0iMzAiIHdpZHRoPSI5IiBoZWlnaHQ9IjYyIiByeD0iMiIgZmlsbD0iIzBiM2Q5MSIvPgogIDxwYXRoIGQ9Ik00OCAzNiBMOTYgNiIgc3Ryb2tlPSIjMTRiOGM4IiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgZmlsbD0ibm9uZSIvPgogIDxwYXRoIGQ9Ik04MiA0IEwxMDAgNCBMMTAwIDIyIiBzdHJva2U9IiMxNGI4YzgiIHN0cm9rZS13aWR0aD0iNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBmaWxsPSJub25lIi8+Cjwvc3ZnPgo=" alt="" class="brand-logo" />
+        <span class="brand-text"><strong>NEXORA</strong><small>DATAWORKS</small></span>
+      </div>
+      <p>&copy; <span id="year"></span> Nexora DataWorks. All rights reserved.</p>
+      <a href="#contact" class="btn btn-small">Get in Touch Today &rsaquo;</a>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">&uarr;</button>
+
+  <script>
+/* ===========================================================
+   Nexora DataWorks - website scripts (no libraries needed)
+   =========================================================== */
+(function () {
+  "use strict";
+
+  // >>> CHANGE THIS to your real email <<<
+  var CONTACT_EMAIL = "info.nexoradataworks@gmail.com";
+
+  var $ = function (id) { return document.getElementById(id); };
+
+  // Footer year
+  var yearEl = $("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Mobile menu
+  var toggle = $("navToggle");
+  var links = $("navLinks");
+  if (toggle && links) {
+    toggle.addEventListener("click", function () {
+      var open = links.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    links.addEventListener("click", function (e) {
+      if (e.target.tagName === "A") {
+        links.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  // Navbar shadow + back-to-top button
+  var navbar = $("navbar");
+  var toTop = $("toTop");
+  window.addEventListener("scroll", function () {
+    var y = window.scrollY || document.documentElement.scrollTop;
+    if (navbar) navbar.classList.toggle("scrolled", y > 10);
+    if (toTop) toTop.classList.toggle("show", y > 500);
+  });
+  if (toTop) {
+    toTop.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  // Scroll-reveal animation
+  var reveals = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add("visible"); });
+  }
+
+  // Portfolio filter
+  var filterWrap = $("filters");
+  if (filterWrap) {
+    var buttons = filterWrap.querySelectorAll(".filter");
+    var projects = document.querySelectorAll("#projectGrid .project");
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        buttons.forEach(function (b) { b.classList.remove("active"); });
+        btn.classList.add("active");
+        var f = btn.getAttribute("data-filter");
+        projects.forEach(function (p) {
+          var show = f === "all" || p.getAttribute("data-category") === f;
+          p.classList.toggle("hide", !show);
+        });
+      });
+    });
+  }
+
+  // KPI count-up in hero
+  document.querySelectorAll(".kpi b[data-count]").forEach(function (el) {
+    var target = parseFloat(el.getAttribute("data-count"));
+    var prefix = el.getAttribute("data-prefix") || "";
+    var suffix = el.getAttribute("data-suffix") || "";
+    var decimals = parseInt(el.getAttribute("data-decimals") || "0", 10);
+    var start = null, dur = 1400;
+    function step(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      el.textContent = prefix + (target * p).toFixed(decimals) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  });
+
+  // Contact form: validates, then opens the visitor's email app (mailto).
+  // To receive messages directly instead, see README "Option B: Formspree".
+  var form = $("contactForm");
+  var status = $("formStatus");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var name = $("name"), email = $("email"), msg = $("message"), svc = $("service");
+      [name, email, msg].forEach(function (f) { f.classList.remove("invalid"); });
+      status.className = "form-status";
+
+      var ok = true;
+      if (!name.value.trim()) { name.classList.add("invalid"); ok = false; }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) { email.classList.add("invalid"); ok = false; }
+      if (!msg.value.trim()) { msg.classList.add("invalid"); ok = false; }
+
+      if (!ok) {
+        status.textContent = "Please fill in all fields with valid details.";
+        status.classList.add("error");
+        return;
+      }
+
+      var subject = "Project enquiry: " + svc.value;
+      var body = "Name: " + name.value.trim() +
+                 "\nEmail: " + email.value.trim() +
+                 "\nService: " + svc.value +
+                 "\n\n" + msg.value.trim();
+      window.location.href = "mailto:" + CONTACT_EMAIL +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
+      status.textContent = "Opening your email app... if nothing opens, email me at " + CONTACT_EMAIL;
+      status.classList.add("ok");
+      form.reset();
+    });
+  }
+})();
+
+</script>
+</body>
+</html>
